@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Trending Now - Short Uploads{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <br>
+        <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+
+            <!-- Content -->
+            <div class="text-white text-center d-flex rgba-black-strong py-2 px-2">
+                <div>
+                    <h3 class="card-title pt-2"><strong>{{name}}</strong></h3>
+                    <a class="btn btn-sm btn-dark-green"><i class="fa fa-play left"></i>Play All</a>
+                </div>
+            </div>
+            <!-- Content -->
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-group">
+                    {% for card in playlist %}
+                        <div class="card-group">
+                            {% for item in card %}
+                                {% if item %}
+                                    <div class="card video-card col-md-2 view hm-zoom hm-black-light">
+                                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                        {% if name == "series" or name == "channels" %}
+                                        <div class="mask">
+                                            <h5 class="text-center">
+                                                <a href="/{{name}}/{{item}}" class="text-white"><b>{{duration}}</b></a>
+                                            </h5> <br><br><br>
+                                        </div>
+                                        {% else %}
+                                        <div class="mask">
+                                            <h5 class="text-center">
+                                                <a href="/watch/{{name}}/{{item}}" class="text-white"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                            </h5> <br>
+                                            <small class="color-white float-right"><b>9:45</b></small>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a class="black-text" href="/watch/{{name}}/{{item}}">{{item}}</a></h5>
+                                            <br>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div> 
+    </div>
+{% endblock %}

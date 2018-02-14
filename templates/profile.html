@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Profile - Short Uploads{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+		<div class="col-lg-12 text-center"><br>
+			<img src="{{user.avatar}}" class="rounded-circle" height="150px" width="150px">
+			<h2>{{user.name}}</h2>
+			<small>{{user.email}}</small>
+			<hr>
+			{% if uploads %}
+				<p>{{message}}</p>
+			{% else %}
+				<p>You haven't uploaded any videos yet. <br> Upload your videos here and share them with the world.</p>
+				<a href="/upload" class="btn btn-primary btn-outline">Upload</a>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

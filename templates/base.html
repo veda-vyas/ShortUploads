@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/mdb/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/mdb/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/mdb/css/style.css" rel="stylesheet">
+    {% endblock %}
+    <style type="text/css">
+        body {
+            background-color: #F1F1F1;
+        }
+        .sub-heading {
+            font-family: "Roboto Condensed", sans-serif;
+            text-transform: uppercase;
+            color: #AAAAAA;
+            font-weight: 200;
+            font-size: 22px;
+            margin-left: 5%;
+        }
+        .sub-heading.hover {
+            color: #feb136;
+        }
+        .carousel-control-prev {
+            width: 5%;
+        }
+        .carousel-control-next {
+            width: 5%;
+        }
+        .playlist-card-group {
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+        .playlist {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        .video-card {
+            margin: 1%;
+            padding: 0px;
+            background-color: bisque;
+            /*border: 1px solid grey !important;*/
+            border-radius: 0px !important;
+        }
+        .card-body {
+            padding: 5%;
+        }
+        .mask {
+            padding: 6%;
+            color: white;
+        }
+        .navbar-brand {
+            font-family: 'Kaushan Script';
+            font-size: 24,px;
+            color: #feb136;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Main Navigation-->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark elegant-color">
+            <!-- Navbar brand -->
+            <a class="navbar-brand amber-text" href="/">Short Uploads</a>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="container-fluid" style="margin-top: 65px;">
+        {% block body %}{% endblock %}
+    </main>
+    <!--Main layout-->
+
+    
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Footer-->  
+
+
+    <!-- Start your project here-->
+    <!-- <div style="height: 100vh">
+        <div class="flex-center flex-column">
+            <h1 class="animated fadeIn mb-4">Material Design for Bootstrap</h1>
+
+            <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+
+            <p class="animated fadeIn text-muted">MDB Team</p>
+        </div>
+    </div> -->
+    <!-- /Start your project here-->
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="/mdb/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/mdb/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/mdb/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/mdb/js/mdb.min.js"></script>
+</body>
+
+</html>

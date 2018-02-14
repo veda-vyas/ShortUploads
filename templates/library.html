@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+{% block title %}Library - Short Uploads{% endblock %}
+{% block body %}
+    <br>
+    {% if trending %}
+        <div class="row">
+            <div class="col-md-12 playlist">
+                <a class="sub-heading" href="/playlist/trending">Trending Now &nbsp;<span class="fa fa-chevron-right"></span></a>
+                <div id="trendingnow" class="carousel slide carousel-fade" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        {% for item in trending %}
+                            {% if loop.index == 1 %}
+                                <div class="carousel-item active">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/watch/trending/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9:45</b></small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><a class="black-text" href="/watch/trending/{{card}}">{{card}}</a></h5>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="carousel-item">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/watch/trending/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9:45</b></small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><a class="black-text" href="/watch/trending/{{card}}">{{card}}</a></h5>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#trendingnow" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#trendingnow" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    {% endif %}
+
+    <br>    
+    {% if recent %}
+        <div class="row">
+            <div class="col-md-12 playlist">
+                <a class="sub-heading" href="/playlist/recent">Recent Uploads &nbsp;<span class="fa fa-chevron-right"></span></a>
+                <div id="recentuploads" class="carousel slide carousel-fade" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        {% for item in recent %}
+                            {% if loop.index == 1 %}
+                                <div class="carousel-item active">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                <div class="mask">
+                                                    <h5 class="text-center">
+                                                        <a class="text-white" href="/watch/recent/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                    </h5> <br>
+                                                    <small class="color-white float-right"><b>9:45</b></small>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a class="black-text" href="/watch/recent/{{card}}">{{card}}</a></h5>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="carousel-item">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/watch/recent/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9:45</b></small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><a class="black-text" href="/watch/recent/{{card}}">{{card}}</a></h5>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#recentuploads" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#recentuploads" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    {% endif %}
+
+    <br>    
+    {% if episodes %}
+        <div class="row">
+            <div class="col-md-12 playlist">
+                <a class="sub-heading" href="/playlist/episodes">Popular Episodes &nbsp;<span class="fa fa-chevron-right"></span></a>
+                <div id="popularepisodes" class="carousel slide carousel-fade" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        {% for item in episodes %}
+                            {% if loop.index == 1 %}
+                                <div class="carousel-item active">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                <div class="mask">
+                                                    <h5 class="text-center">
+                                                        <a class="text-white" href="/watch/episodes/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                    </h5> <br>
+                                                    <small class="color-white float-right"><b>9:45</b></small>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a class="black-text" href="/watch/episodes/{{card}}">{{card}}</a></h5>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="carousel-item">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/watch/episodes/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9:45</b></small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><a class="black-text" href="/watch/episodes/{{card}}">{{card}}</a></h5>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#popularepisodes" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#popularepisodes" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    {% endif %}
+
+    <br>    
+    {% if series %}
+        <div class="row">
+            <div class="col-md-12 playlist">
+                <a class="sub-heading" href="/playlist/series">Popular Series &nbsp;<span class="fa fa-chevron-right"></span></a>
+                <div id="popularseries" class="carousel slide carousel-fade" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        {% for item in series %}
+                            {% if loop.index == 1 %}
+                                <div class="carousel-item active">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                <div class="mask">
+                                                    <h5 class="text-center">
+                                                        <a class="text-white" href="/series/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                    </h5> <br>
+                                                    <small class="color-white float-right"><b>9 episodes</b></small>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="carousel-item">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/series/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9 episodes</b></small>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#popularseries" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#popularseries" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    {% endif %}
+
+    <br>    
+    {% if channels %}
+        <div class="row">
+            <div class="col-md-12 playlist">
+                <a class="sub-heading" href="/playlist/channels">Popular Channels &nbsp;<span class="fa fa-chevron-right"></span></a>
+                <div id="popularchannels" class="carousel slide carousel-fade" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                        {% for item in channels %}
+                            {% if loop.index == 1 %}
+                                <div class="carousel-item active">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item[0] %}
+                                            <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                <div class="mask">
+                                                    <h5 class="text-center">
+                                                        <a class="text-white" href="/channels/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                    </h5> <br>
+                                                    <small class="color-white float-right"><b>12 videos</b></small>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item[1] %}
+                                            <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                <div class="mask">
+                                                    <h5 class="text-center">
+                                                        <a class="text-white" href="/channels/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                    </h5> <br>
+                                                    <small class="color-white float-right"><b>12 videos</b></small>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="carousel-item">
+                                    <div class="card-group playlist-card-group">
+                                        {% for card in item %}
+                                            {% if card %}
+                                                <div class="card col-md-2 video-card view hm-zoom hm-black-light">
+                                                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg" alt="Card image cap">
+                                                    <div class="mask">
+                                                        <h5 class="text-center">
+                                                            <a class="text-white" href="/watch/{{card}}"><span class="fa fa-play big-play" style="font-size:48px;"></span></a>
+                                                        </h5> <br>
+                                                        <small class="color-white float-right"><b>9:45</b></small>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><a class="black-text" href="/watch/{{card}}">{{card}}</a></h5>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#popularchannels" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#popularchannels" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; border-radius: 50%"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>            
+            </div>
+        </div>
+    {% endif %}
+    <br>
+    <br>
+{% endblock %}

@@ -1,0 +1,71 @@
+body {
+	height: 100%;
+	background-image: url("/images/bg2.png");
+    font-size: 16px;
+}
+
+.background-yellow {
+	/*background-color: rgba(255, 193, 7, 0.75);;*/
+	background-color: transparent;
+}
+.background-black {
+	background-color: transparent;
+}
+.page-height {
+	/*height: 100%;*/
+	/*background-image: url("/images/bg2.png");*/
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.92);
+}
+.btn-black {
+	background-color: black;
+	color: white;
+	border-radius: 0px;
+}
+.heading {
+	background: 0 0;
+	padding: 1.5%;
+	padding-bottom: 1.5%;
+    font-family: 'Kaushan Script';
+	font-size: 48px;
+	color: #feb136;
+}
+.btn-yellow {
+	background-color: #feb136;
+}
+.btn-outline-danger {
+	letter-spacing: 1.9px;
+}
+.row {
+	padding-bottom: 1px;
+}
+.nav-item {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.nav-link {
+	color: black;
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-link.active {
+	color: black !important;
+	border: none !important;
+	background-color: transparent !important;
+	border-bottom: 2px solid red !important;
+}
+.tab-pane {
+	padding: 10px;
+}
+.form {
+	padding: 10px;
+}
+.auth-div {
+	margin: 20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 5%;
+	border: 1px solid grey;
+	background-image: url("/images/bg3.jpg");
+}
